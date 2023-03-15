@@ -1,0 +1,28 @@
+{% extends 'layout.twig' %}
+{% block content %}
+<button onclick="window.location.href='./index.php?action=add'">Thêm</button>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>User</th>
+            <th>Email</th>
+            <th>Sửa</th>
+            <th>Xoá</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td><a href="./index.php?action=edit&id={% set id = user.id %}{{id}}">Sửa</a></td>
+            <td><a href="./index.php?action=delete&id={% set id = user.id %}{{id}}">Xoá</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+{% set title = "Home page" %}

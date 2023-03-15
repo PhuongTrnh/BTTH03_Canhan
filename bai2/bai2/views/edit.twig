@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+<h2>Edit User</h2>
+<form action="index.php?action=edit&id={{user.id}}" method="POST">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" value="{{user.name}}">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" value="{{user.email}}">
+    <label for="pass">Password</label>
+    <input type="password" id="password" name="password" value="{{user.password}}">
+    <input type="submit" value="Edit User">
+</form>
+{% endblock %}
+
+{% set title = "Edit user" %}

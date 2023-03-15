@@ -1,0 +1,19 @@
+{
+    "name": "phuon/bai2",
+    "autoload": {
+        "psr-4": {
+            "Phuon\\Bai2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ht2602",
+            "email": "tuan260202@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^10.0",
+        "ezyang/htmlpurifier": "^4.16",
+        "twig/twig": "^3.5"
+    }
+}

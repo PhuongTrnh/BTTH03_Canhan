@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+<h2>Add User</h2>
+<form action="index.php?action=add" method="POST">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+    <label for="pass">Password</label>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="Add User">
+</form>
+{% endblock %}
+
+{% set title = "Add user" %}
